@@ -38,7 +38,8 @@
       <div class="form-group form-group-class pt-2">
         <label for="image">Profile Picture</label><br>
         <input class="field form-control" formControlName="image"
-        name="image" type="text" placeholder="Profile Picture" autocomplete="off" required/>
+        name="image" (change)="uploadImage($event)" type="file" placeholder="Profile Picture" autocomplete="off" required/>
+        
       </div>
       <div class="submit-button pt-2">
         <button (click)="onSubmit(addEmployee.value)">Submit</button>

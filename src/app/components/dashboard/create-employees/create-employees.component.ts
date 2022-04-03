@@ -13,6 +13,7 @@ export class CreateEmployeesComponent implements OnInit {
   listOfNewEmployees: any = [];
   addEmployee!: FormGroup;
   submitted: boolean = false;
+  file: any;
   constructor(
     private fb: FormBuilder,
     private employeeService: EmployeeService
@@ -55,5 +56,13 @@ export class CreateEmployeesComponent implements OnInit {
     this.submitted = false;
     this.addEmployee.reset();
 }
+
+  uploadImage(event: any){
+    const file = event.target.file[0];
+    const myReader = new FileReader;
+    myReader.onload = (event) => {
+      this.file = myReader.result;
+    }
+  }
 
 }
