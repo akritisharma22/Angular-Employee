@@ -1,0 +1,40 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.page{
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+    .page__box{
+        min-height: 150px;
+        background: #1e293b;
+        margin: 0 -1rem;
+        font-size: 36px;
+    }
+    .page__content{
+        min-height: calc(100vh - 178px);
+        border-radius: 10px;
+        margin-top: -4rem;
+        background: white;
+        color: black;
+        font-size: 0.9rem;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            p{
+                font-size: 18px;
+                font-weight: 600px;
+            }
+            button{
+                border: none;
+                color: #f1f5f9;
+                background: #1e293b;
+                border-radius: 4px;
+            }
+        }
+        .employee-data{
+            table{
+                min-width: 100%;
+            }
+        }
+    }
+}
